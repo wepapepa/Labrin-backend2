@@ -1,9 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: aliceblue;
     color: #161616;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 h1 {
     background-color: #761059;
     color: #fff8f8;
 }
+
