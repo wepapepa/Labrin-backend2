@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { __dirname } from "../path";
-import { productValidation } from "../middlewares/productValidation";
-import { idValidation } from "../middlewares/idValidation";
-import ProductManager from "../managers/products.manager";
+import { __dirname } from "../path.js";
+import { productValidation } from "../middlewares/productValidation.js";
+import { idValidation } from "../middlewares/idValidation.js";
+import ProductManager from "../managers/products.manager.js";
 
 const productRouter = Router();
 const productManager = new ProductManager(`${__dirname}/db/products.json`);

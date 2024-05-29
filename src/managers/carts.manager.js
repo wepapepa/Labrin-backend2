@@ -1,11 +1,11 @@
 import fs from 'fs'
 import {v4 as uuid} from 'uuid'
-import { __dirname } from '../path'
-import ProductsManager from './products.manager'
+import { __dirname } from '../path.js'
+import ProductManager from "../managers/products.manager.js";
 
-const productsManager = new ProductsManager(`${__dirname}/db/products.json`)
+const productManager = new ProductManager(`${__dirname}/db/products.json`);
 
-class CartsManager {
+export class CartsManager {
     constructor(path) {
         this.path = path;
     }

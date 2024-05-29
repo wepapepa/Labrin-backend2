@@ -1,7 +1,7 @@
 import fs from "fs";
 import { v4 as uuid } from "uuid";
 
-class ProductsManager {
+export class ProductManager {
     constructor(path) {
         this.path = path;
     }
@@ -20,14 +20,14 @@ class ProductsManager {
     async addNewProduct(obj) {
         try {
             const newProduct = {
-                is: uuid(),
+                id: uuid(), //paso id nuevo
                 status: true,
                 ...obj,
             };
             const products = await this.getProducts();
             products.push(newProduct);
             await fs.promises.writeFile(this.path, JSON.stringify(products, null, '\t'));
-            console.log("producto agregado correctaente");
+            console.log("producto agregado correctamente");
             return newProduct;
         } catch (error) {
             console.error(error);
@@ -67,7 +67,7 @@ class ProductsManager {
         try {
             const products = await this.getProducts();
             const productListed = products.find((product) => product.id === id);
-            if (!producListed) return null;
+            if (!productListed) return null;
             const productsUpdated = products.filter((product) => product.id !== id);
             await fs.promises.writeFile(this.path, JSON.stringify(productsUpdated, null, '\t'));
             return productListed;
@@ -77,4 +77,5 @@ class ProductsManager {
     }
 }
 
-export default ProductsManager;
+export const productsManager = new ProductManager('path/to/products.json');
+export default ProductManager;

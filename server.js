@@ -2,6 +2,9 @@ import express from "express";
 import handlebars from 'express-handlebars';
 import { Server } from "socket.io";
 import viewsRouter from './src/routes/views.routes.js'
+import ProductsManager from "./src/managers/products.manager.js";
+import cartRouter from "./src/routes/carts.routes.js";
+import productsRouter from "./src/routes/products.routes.js";
 
 import { __dirname } from "./src/path.js";
 
