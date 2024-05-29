@@ -26,7 +26,9 @@ app.use('/', viewsRouter)
 
 const PORT = 8080;
 
-const httpServer = app.listen(PORT, () => console.log(`Server ok on port ${PORT}`))
+const httpServer = app.listen(PORT, () => {
+    console.log(`Server ok on port ${PORT}`)
+});
 
 const socketServer = new Server(httpServer);
 

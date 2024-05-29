@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io(); //levanta la conexión con el socket del cliente
 
 socket.on("products", (products) => {
 

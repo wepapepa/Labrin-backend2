@@ -1,0 +1,70 @@
+[
+    {
+        "id": "",
+        "status": true,
+        "title": "El diseño como Storytelling",
+        "description": "Ellen Lupton, Editorial GG",
+        "category": "Diseño",
+        "price": 29300,
+        "stock": 10,
+        "img": "https://images.cdn2.buscalibre.com/fit-in/360x360/6f/b8/6fb84c438320e95a54cb102a78f62a2c.jpg"
+
+    },
+
+    {
+        "id": "",
+        "status": true,
+        "title": "Lean vs Agile vs Design Thinking: Lo que Realmente Necesitas Conocer Para Construir Productos Digitales con Equipos de Alto Rendimiento",
+        "description": "Jeff Gothelf, Createspace Independent Publishing Platform",
+        "category": "Design Thinking",
+        "price": 30990,
+        "stock": 6,
+        "img": "https://images.cdn3.buscalibre.com/fit-in/360x360/fc/58/fc589661fa28efeca0f5d77e561aea43.jpg"
+    },
+
+    {
+        "id": "",
+        "status": true,
+        "title": "El proceso del Diseño Gráfico: del problema a la solución",
+        "description": "Cristina Rodríguez Fischer, Blume",
+        "category": "Diseño gráfico",
+        "price": 26980,
+        "stock": 2,
+        "img": "https://images.cdn1.buscalibre.com/fit-in/360x360/6c/6d/6c6dfda00c0e581a016726bc404188cf.jpg"
+    },
+
+    {
+        "id": "",
+        "status": true,
+        "title": "Layout Design",
+        "description": "Yehua Qu, Parramon",
+        "category": "Diseño editorial",
+        "price": 75990,
+        "stock": 20,
+        "img": "https://images.cdn1.buscalibre.com/fit-in/360x360/3b/59/3b59619a918bfbf57f440011682edb85.jpg"
+    },
+
+    {
+        "id": "",
+        "status": true,
+        "title": "Extra-Bold: Un manual feminista inclusivo antirracista y no binario para el diseño gráfico",
+        "description": "Compilación de ensayos, Editorial GG",
+        "category": "Diseño gráfico",
+        "price": 64990,
+        "stock": 4,
+        "img": "https://images.cdn2.buscalibre.com/fit-in/360x360/86/14/86147e9cb70d640876444c4066fae4e5.jpg"
+    },
+
+
+    {
+        "id": "",
+        "status": true,
+        "title": "El ABC de la Bauhaus: La Bauhaus Y La Teoría del Diseño",
+        "description": "Ellen Lupton y J. Miller, Editorial GG",
+        "category": "Diseño",
+        "price":54990,
+        "stock": 42
+        "img": "https://images.cdn1.buscalibre.com/fit-in/360x360/30/11/30115ae03b93a4b2ca5707d6d9d467c0.jpg"
+    }
+
+]
