@@ -1,1 +1,30 @@
-<h2>Aqui listamos los productos</h2>
+<main class="vista1">
+    <h1>Vista de los productos</h1>
+
+    <form class="inputLimit" action="/" method="get">
+
+        <label for="limit">Cantidad de prod. para visualizar en vista 1:</label>
+        <input type="number" name="limit" id="limit" min="1" max="50" />
+
+        <button type="submit">Enviar</button>
+    
+    </form>
+
+    <div class="products-container">
+        {{#if products.length}}
+        {{#each products}}
+        <div class="card">
+            <h2>{{this.title}}</h2>
+            <p>{{this.description}}</p>
+            <div>
+                <p>Precio: $ {{this.price}}</p>
+                <p>Stock: {{this.stock}}</p>
+            </div>
+            {{/each}}
+            {{else}}
+            <h2>No hay productos disponibles para mostrar</h2>
+            </div>
+        {{/if}}
+    </div>
+</main>
+
