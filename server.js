@@ -1,7 +1,7 @@
 import express from "express";
 import handlebars from 'express-handlebars';
 import { Server } from "socket.io";
-import viewsRouter from './src/routes/views.router.js'
+import viewsRouter from './src/routes/views.routes.js'
 
 import { __dirname } from "./src/path.js";
 
