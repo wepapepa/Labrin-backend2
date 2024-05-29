@@ -1,10 +1,11 @@
 import express from "express";
 import handlebars from 'express-handlebars';
 import { Server } from "socket.io";
+import viewsRouter from './src/routes/views.router.js'
 
-import { __dirname } from "./src/path";
+import { __dirname } from "./src/path.js";
 
-const productManager = newProductsManager(`${__dirname}/db/products.json`)
+const productManager = new ProductsManager(`${__dirname}/db/products.json`)
 
 const app = express()
 
@@ -15,6 +16,8 @@ app.use(express.urlencoded({extended:true}))
 app.use('/api/carts', cartRouter)
 app.use('/api/products', productsRouter)
 
+
+//tres líneas clave para handlebars
 app.engine('handlebars', handlebars.engine())
 app.set('views', `${__dirname}/views`)
 app.set('view engine', 'handlebars')
@@ -23,7 +26,7 @@ app.use('/', viewsRouter)
 
 const PORT = 8080;
 
-const httpServer = app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+const httpServer = app.listen(PORT, () => console.log(`Server ok on port ${PORT}`))
 
 const socketServer = new Server(httpServer);
 
