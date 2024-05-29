@@ -31,12 +31,12 @@ const httpServer = app.listen(PORT, () => console.log(`Server ok on port ${PORT}
 const socketServer = new Server(httpServer);
 
 socketServer.on('connection', async (socket) => {
-    console.log(`New client connected - client ID: ${socket.id}`);
+    console.log(`Nuevo cliente conectado - client ID: ${socket.id}`);
 
     socket.emit('products', await productManager.getProducts());
-    console.log("Products sent to client");
+    console.log("Productos enviados al cliente");
 
-    socket.on('disconnect', () => console.log(`CLient disconnected`));
+    socket.on('disconnect', () => console.log(`Cliente desconectado`));
 
     socket.on('newProduct', async (newProduct) => {
         productManager.addNewProduct(newProduct);
@@ -46,7 +46,7 @@ socketServer.on('connection', async (socket) => {
 
     socket.on('deleteProduct', async (id) => {
         await productManager.deleteProduct(id)
-        console.log("product deleted")
+        console.log("producto eliminado")
         const products = await productManager.getProducts();
         socketServer.emit('products', products);
     });
